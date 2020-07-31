@@ -111,7 +111,7 @@ public:
   void setRefreshToken(const char *refreshToken);
   bool refreshAccessToken();
   bool checkAndRefreshAccessToken();
-  const char *requestAccessTokens(const char *code, const char *redirectUrl);
+  char *requestAccessTokens(const char *code, const char *redirectUrl);
 
   // Generic Request Methods
   int makeGetRequest(const char *command, const char *authorization, const char *accept = "application/json", const char *host = SPOTIFY_HOST);

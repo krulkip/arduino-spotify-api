@@ -202,7 +202,7 @@ bool ArduinoSpotify::checkAndRefreshAccessToken()
     return true;
 }
 
-const char *ArduinoSpotify::requestAccessTokens(const char *code, const char *redirectUrl)
+char *ArduinoSpotify::requestAccessTokens(const char *code, const char *redirectUrl)
 {
 
     char body[1000];
@@ -243,7 +243,7 @@ const char *ArduinoSpotify::requestAccessTokens(const char *code, const char *re
     }
 
     closeClient();
-    return _refreshToken;
+    return (char*)_refreshToken;
 }
 
 bool ArduinoSpotify::play(const char *deviceId)
